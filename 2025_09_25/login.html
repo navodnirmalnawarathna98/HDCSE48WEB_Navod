@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .left-section {
+            flex: 1;
+            background: linear-gradient(135deg, #6b48ff 0%, #ff6f91 100%);
+            position: relative;
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .left-section p {
+            font-size: 1em;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+
+        .shapes {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transform: rotate(45deg);
+        }
+
+        .shape-1 {
+            width: 300px;
+            height: 50px;
+            bottom: 50px;
+            left: -50px;
+        }
+
+        .shape-2 {
+            width: 250px;
+            height: 40px;
+            bottom: 120px;
+            left: 100px;
+        }
+
+        .shape-3 {
+            width: 200px;
+            height: 30px;
+            bottom: 180px;
+            left: -20px;
+        }
+
+        .right-section {
+            flex: 1;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-form h2 {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1em;
+            outline: none;
+            background: #f5f5ff;
+        }
+
+        .form-group input:focus {
+            border-color: #6b48ff;
+        }
+
+        .form-group .icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .options label {
+            display: flex;
+            align-items: center;
+            color: #666;
+        }
+
+        .options a {
+            color: #6b48ff;
+            text-decoration: none;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #ff6f91, #6b48ff);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: linear-gradient(90deg, #6b48ff, #ff6f91);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .left-section {
+                flex: none;
+                height: 40vh;
+                padding: 30px;
+            }
+
+            .left-section h1 {
+                font-size: 2em;
+            }
+
+            .left-section p {
+                font-size: 0.9em;
+            }
+
+            .right-section {
+                flex: none;
+                height: 60vh;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left-section">
+        <h1>Welcome to website</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+        <div class="shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="login-form">
+            <h2>User Login</h2>
+            <div class="form-group">
+                <span class="icon">👤</span>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <span class="icon">🔒</span>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox"> Remember
+                </label>
+                <a href="#">Forget password?</a>
+            </div>
+            <button class="login-btn">Login</button>
+        </div>
+    </div>
+</body>
+</html>
